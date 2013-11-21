@@ -11,6 +11,12 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
+	<bean name="/test/multi" class="com.aoeng.smvc.controller.MultiController">
+		<property name="methodNameResolver" ref="parameterMethodNameResolver" />
+	</bean>
+	<bean name="parameterMethodNameResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+		<property name="paramName" value="do" />
+	</bean>
 	<bean name="/test/hello" class="com.aoeng.smvc.controller.HelloController"></bean>
 
 	<bean id="view" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
