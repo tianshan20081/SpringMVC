@@ -15,10 +15,6 @@
 	<context:component-scan base-package="com.aoeng.smvc.web.annotation" />
 	<!-- 开启注解驱动。 -->
 	<mvc:annotation-driven />
-	<!-- 启用注解模式 -->
-	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" /> <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" /> -->
-
-
 
 	<!-- 对于静态资源不许要进行过滤 添加免过滤 资源 eg :CSS,JQuery ,IMG... -->
 	<mvc:resources location="/img/**" mapping="/img/**" />
