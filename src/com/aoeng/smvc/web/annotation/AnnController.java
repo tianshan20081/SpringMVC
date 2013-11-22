@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.aoeng.smvc.web.controller;
+package com.aoeng.smvc.web.annotation;
 
 import java.util.HashMap;
 import java.util.Map;

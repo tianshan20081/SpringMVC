@@ -12,7 +12,7 @@
        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
 	<!-- 启用扫描 -->
-	<context:component-scan base-package="com.aoeng.smvc.web.controller" />
+	<context:component-scan base-package="com.aoeng.smvc.web.annotation" />
 	<!-- 开启注解驱动。 -->
 	<mvc:annotation-driven />
 	<!-- 启用注解模式 -->
