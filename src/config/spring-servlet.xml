@@ -7,9 +7,13 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.2.xsd
        http://www.springframework.org/schema/mvc
-       http://www.springframework.org/schema/context/spring-mvc-3.2.xsd
+       http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<!-- 对于静态资源不许要进行过滤 添加免过滤 资源 eg :CSS,JQuery ,IMG... -->
+	<mvc:resources location="/img/**" mapping="/img/**" />
+	<mvc:resources location="/js/**" mapping="/js/**" />
 
 	<bean name="/test/multi" class="com.aoeng.smvc.controller.MultiController">
 		<property name="methodNameResolver" ref="parameterMethodNameResolver" />
