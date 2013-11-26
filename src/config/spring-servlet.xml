@@ -19,6 +19,8 @@
 	<!-- 对于静态资源不许要进行过滤 添加免过滤 资源 eg :CSS,JQuery ,IMG... -->
 	<mvc:resources location="/img/**" mapping="/img/**" />
 	<mvc:resources location="/js/**" mapping="/js/**" />
+	<mvc:resources location="/images/**" mapping="/images/**" />
+	<mvc:resources location="/swf/**" mapping="/swf/**" />
 
 	<bean name="/test/multi" class="com.aoeng.smvc.controller.MultiController">
 		<property name="methodNameResolver" ref="parameterMethodNameResolver" />
@@ -31,6 +33,13 @@
 	<bean id="view" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="suffix" value=".jsp" />
 		<property name="prefix" value="/" />
+	</bean>
+	<!-- 上传文件表单视图的解析器 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 里面的参数可以在源代码中查看 -->
+		<property name="defaultEncoding" value="UTF-8" />
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxInMemorySize" value="9999999" />
 	</bean>
 
 </beans>
